@@ -1,6 +1,6 @@
 baseURL = "http://localhost"
 title = "Geekblog"
-theme = "hugo-geekblog"
+theme = "hugo-geekblog1"
 
 # Geekblog required configuration
 pygmentsUseClasses = true
