@@ -1,42 +1,51 @@
-baseURL = "http://localhost"
-title = "Geekblog"
-theme = "hugo-geekblog1"
+baseURL = "https://gohugo.io"
+title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright © 2008–2019, Steve Francia and the Hugo Authors; all rights reserved."
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
 
-# Geekblog required configuration
-pygmentsUseClasses = true
-pygmentsCodeFences = true
-disablePathToLower = true
+[menu]
 
-# Needed for mermaid shortcodes
-[markup]
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.tableOfContents]
-    startLevel = 1
-    endLevel = 9
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
 
 [taxonomies]
-  author = "authors"
-  tag = "tags"
+category = "categories"
+tag = "tags"
+series = "series"
 
-[mediaTypes]
-  [mediaTypes."application/atom+xml"]
-    suffixes = ["xml"]
+[privacy]
 
-[outputFormats]
-  [outputFormats.Atom]
-    name = "Atom"
-    mediaType = "application/atom+xml"
-    baseName = "atom"
-    isPlainText = false
-    rel = "alternate"
-    isHTML = false
-    noUgly = true
-    permalinkable = false
+  [privacy.vimeo]
+    disabled = false
+    simple = true
 
-[outputFormats.outputs]
-  home = ["HTML", "ATOM"]
-  page = ["HTML"]
-  section = ["HTML"]
-  taxonomy = ["HTML"]
-  term = ["HTML", "ATOM"]
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
