@@ -8,3 +8,5 @@ fields:
     required: false
   label: Hello!
   description: how ar eyou
+pages:
+- content/asdf.md
