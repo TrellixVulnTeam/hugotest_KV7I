@@ -1,4 +1,10 @@
 ---
 label: Hello!
 hide_body: false
-fields: []
+fields:
+- name: hello_
+  type: text
+  config:
+    required: false
+  label: Hello!
+  description: how ar eyou
